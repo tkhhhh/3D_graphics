@@ -1,0 +1,9 @@
+/Users/benedictbarrow/.jenv/shims/java
+openjdk version "1.8.0_345"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_345-b01)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.345-b01, mixed mode)
+LIBXCB_ALLOW_SLOPPY_LOCK:
+LIBGL_DRIVERS_PATH:
+LIBGL_DEBUG:
+java
+Error: Could not find or load main class com.jogamp.newt.opengl.GLWindow

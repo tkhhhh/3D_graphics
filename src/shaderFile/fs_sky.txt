@@ -1,0 +1,45 @@
+#version 330 core
+
+in vec3 aPos;
+in vec3 aNormal;
+in vec2 aTexCoord;
+
+out vec4 fragColor;
+
+uniform sampler2D first_texture;
+uniform vec3 viewPos;
+
+struct Light {
+  vec3 position;
+  vec3 ambient;
+  vec3 diffuse;
+  vec3 specular;
+  vec3 direction;
+
+  float cutOff;
+  float outerCutOff;
+
+  float constant;
+  float linear;
+  float quadratic;
+};
+
+uniform Light light1;
+uniform Light light2;
+uniform Light light3;
+uniform Light light4;
+
+uniform float transparency;
+
+struct Material {
+  vec3 ambient;
+  vec3 diffuse;
+  vec3 specular;
+  float shininess;
+};
+
+uniform Material material;
+
+void main() {
+      fragColor = vec4(texture(first_texture, aTexCoord).rgb, 1.0f);
+}
